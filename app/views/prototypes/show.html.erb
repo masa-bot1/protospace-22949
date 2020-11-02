@@ -51,7 +51,8 @@
             <li class="comments_list">
                 <p>
                   <%= comment.text %>
-                  <%= link_to "（#{comment.user.name}）", "/users/#{@prototype.user.id}", class: :comment_user %>
+                  <%= link_to "（#{comment.user.name}）", "/users/#{comment.user.id}", class: :comment_user %> 
+                                                  <%# フォーム提出後、@prototype.user.id→comment.user.idに修正（11/1修正：ミスに気づいたため） %>
                 </p>
             </li>
           <% end %>
